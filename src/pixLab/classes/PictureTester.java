@@ -18,6 +18,13 @@ public class PictureTester
     beach.explore();
   }
   
+  public static void testZeroRed()
+  {
+	  Picture arch = new Picture("arch.jpg");
+	  arch.explore();
+	  arch.zeroRed();
+	  arch.explore();
+  }
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
