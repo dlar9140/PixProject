@@ -38,7 +38,7 @@ public class PictureTester
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
-    Picture temple = new Picture("seagull.jpg");
+    Picture temple = new Picture("temple.jpg");
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
@@ -77,7 +77,7 @@ public class PictureTester
     //testMirrorVertical();
     testMirrorTemple();
     //testMirrorArms();
-    //testMirrorGull();
+    testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
