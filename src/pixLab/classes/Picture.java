@@ -141,7 +141,7 @@ public class Picture extends SimplePicture
  	    int height = pixels[0].length;
  	    
  	    
- 	    for (int row = 0; col < pixels[0].length; col++)
+ 	    for (int col = 0; col < pixels[0].length; col++)
  	    {
  	      for (int row = 0; row < height / 2; row++)
  	      {
@@ -264,6 +264,22 @@ public class Picture extends SimplePicture
     beach.explore();
     beach.zeroBlue();
     beach.explore();
+  }
+  
+  public void chromakey(Picture replacement, Color changeColor)
+  {
+	  Pixel [] [] mainPixels = this.getPixels2D();
+	  Pixel [] [] replacementpixels = replacement.getPixels2D();
+	  
+	  for (int row = 0; row < mainPixels[0].length; row++)
+	  
+	  for (int col = 0; col < mainPixels[0].length; col++)
+	  {
+		  if (mainPixels[row][col].colorDistance(changeColor) < 10)
+		  {
+			  mainPixels[row][col].setColor(replacementPixels[row][col].getColor());
+		  }
+	  }
   }
   
 } // this } is the end of class Picture, put all new methods before this

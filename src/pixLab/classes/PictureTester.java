@@ -1,4 +1,5 @@
 package pixLab.classes;
+import java.awt.Color;
 /**
  * This class contains class (static) methods
  * that will help you test the Picture class 
@@ -7,9 +8,21 @@ package pixLab.classes;
  * 
  * @author Barbara Ericson 
  */
+
+
 public class PictureTester
 {
-  /** Method to test zeroBlue */
+	public static void testChromakey()
+	{
+		Picture source = new Picture("Kirby.jpg");
+		Picture background = new Picture("White and Wavy.jpg");
+		source.explore();
+		background.explore();
+		source.chromakey(background, Color.WHITE);
+		source.explore();
+	}
+  
+	/** Method to test zeroBlue */
   public static void testZeroBlue()
   {
     Picture beach = new Picture("beach.jpg");
@@ -77,7 +90,7 @@ public class PictureTester
     //testMirrorVertical();
     testMirrorTemple();
     //testMirrorArms();
-    testMirrorGull();
+    //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
