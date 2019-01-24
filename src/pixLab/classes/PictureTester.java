@@ -9,7 +9,6 @@ import java.awt.Color;
  * @author Barbara Ericson 
  */
 
-
 public class PictureTester
 {
 	public static void testChromakey()
@@ -20,6 +19,20 @@ public class PictureTester
 		background.explore();
 		source.chromakey(background, Color.WHITE);
 		source.explore();
+	}
+	
+	public static void testSteganograpphy()
+	{
+		Picture source = new Picture("ada.jpg");
+		
+		Picture message = new Picture("hide.jpg");
+		source.explore();
+		message.explore();
+		source.hidePicture(message);
+		source.explore();
+		source.revealPicture();
+		source.explore();
+	
 	}
   
 	/** Method to test zeroBlue */
@@ -103,5 +116,6 @@ public class PictureTester
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
 	//testGlitchMethod();
+	//testSteganograpphy();
   }
 }
