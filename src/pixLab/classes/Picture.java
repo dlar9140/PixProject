@@ -114,22 +114,22 @@ public class Picture extends SimplePicture
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
     * from left to right */
-  public void mirrorVertical()
-  {
-    Pixel[][] pixels = this.getPixels2D();
-    Pixel leftPixel = null;
-    Pixel rightPixel = null;
-    int width = pixels[0].length;
-    for (int row = 0; row < pixels.length; row++)
-    {
-      for (int col = 0; col < width / 2; col++)
-      {
-        leftPixel = pixels[row][col];
-        rightPixel = pixels[row][width - 1 - col];
-        rightPixel.setColor(leftPixel.getColor());
-      }
-    } 
-  }
+  //public void mirrorVertical()
+  //{
+    //Pixel[][] pixels = this.getPixels2D();
+    //Pixel leftPixel = null;
+    //Pixel rightPixel = null;
+    //int width = pixels[0].length;
+    //for (int row = 0; row < pixels.length; row++)
+    //{
+      //for (int col = 0; col < width / 2; col++)
+      //{
+        //leftPixel = pixels[row][col];
+        //rightPixel = pixels[row][width - 1 - col];
+        //rightPixel.setColor(leftPixel.getColor());
+      //}
+    //} 
+  //}
 
   
   	 public void mirrorHorizontal()
@@ -310,12 +310,27 @@ public class Picture extends SimplePicture
         rightColor = rightPixel.getColor();
         if (leftPixel.colorDistance(rightColor) > 
             edgeDist)
-          leftPixel.setColor(Color.ORANGE);
+          leftPixel.setColor(Color.BLUE);
         else
-          leftPixel.setColor(Color.GREEN);
+          leftPixel.setColor(Color.ORANGE);
       }
     }
   }
+  {
+	    Pixel[][] pixels = this.getPixels2D();
+	    Pixel leftPixel = null;
+	    Pixel rightPixel = null;
+	    int width = pixels[0].length;
+	    for (int row = 0; row < pixels.length; row++)
+	    {
+	      for (int col = 0; col < width / 2; col++)
+	      {
+	        leftPixel = pixels[row][col];
+	        rightPixel = pixels[row][width - 1 - col];
+	        rightPixel.setColor(leftPixel.getColor());
+	      }
+	    } 
+	  }
   
   
   /* Main method for testing - each class in Java can have a main 
