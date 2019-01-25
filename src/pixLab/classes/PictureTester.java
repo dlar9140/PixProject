@@ -13,7 +13,7 @@ public class PictureTester
 {
 	public static void testChromakey()
 	{
-		Picture source = new Picture("Kirby.jpg");
+		Picture source = new Picture("Kirby.jpeg");
 		Picture background = new Picture("White and Wavy.jpg");
 		source.explore();
 		background.explore();
@@ -55,7 +55,7 @@ public class PictureTester
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("Kirby.png");
+    Picture caterpillar = new Picture("Kirby.jpeg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
@@ -81,7 +81,7 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("swan.jpg");
+    Picture swan = new Picture("Kirby.jpeg");
     swan.edgeDetection(10);
     swan.explore();
   }
@@ -107,7 +107,7 @@ public class PictureTester
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    //testEdgeDetection();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();

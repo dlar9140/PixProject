@@ -279,7 +279,7 @@ public class Picture extends SimplePicture
   /** Method of collage for my glitch art */
   public void createCollage()
   {
-	Picture kirby1 = new Picture("Kirby.png");
+	Picture kirby1 = new Picture("Kirby.jpeg");
 	this.copy(kirby1,0,0);
 	this.copy(kirby1,100,0);
 	this.copy(kirby1,200,0);
@@ -310,9 +310,9 @@ public class Picture extends SimplePicture
         rightColor = rightPixel.getColor();
         if (leftPixel.colorDistance(rightColor) > 
             edgeDist)
-          leftPixel.setColor(Color.BLACK);
+          leftPixel.setColor(Color.ORANGE);
         else
-          leftPixel.setColor(Color.WHITE);
+          leftPixel.setColor(Color.GREEN);
       }
     }
   }
