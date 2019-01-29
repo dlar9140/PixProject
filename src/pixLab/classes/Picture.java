@@ -114,22 +114,22 @@ public class Picture extends SimplePicture
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
     * from left to right */
-  //public void mirrorVertical()
-  //{
-    //Pixel[][] pixels = this.getPixels2D();
-    //Pixel leftPixel = null;
-    //Pixel rightPixel = null;
-    //int width = pixels[0].length;
-    //for (int row = 0; row < pixels.length; row++)
-    //{
-      //for (int col = 0; col < width / 2; col++)
-      //{
-        //leftPixel = pixels[row][col];
-        //rightPixel = pixels[row][width - 1 - col];
-        //rightPixel.setColor(leftPixel.getColor());
-      //}
-    //} 
-  //}
+  public void mirrorVertical()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel leftPixel = null;
+    Pixel rightPixel = null;
+    int width = pixels[0].length;
+    for (int row = 0; row < pixels.length; row++)
+    {
+      for (int col = 0; col < width / 2; col++)
+      {
+        leftPixel = pixels[row][col];
+        rightPixel = pixels[row][width - 1 - col];
+        rightPixel.setColor(leftPixel.getColor());
+      }
+    } 
+  }
 
   
   	 public void mirrorHorizontal()
@@ -331,6 +331,17 @@ public class Picture extends SimplePicture
 	      }
 	    } 
 	  }
+  //{
+	//Picture kirby1 = new Picture("Kirby.jpeg");
+	//this.copy(kirby1,0,0);
+	//this.copy(kirby1,100,0);
+	//this.copy(kirby1,200,0);
+	//this.copy(kirby1,300,0);
+	//this.copy(kirby1,400,0);
+	//this.copy(kirby1,500,0);
+	//this.mirrorVertical();
+	//this.write("collage.jpg");
+  //}
   
   
   /* Main method for testing - each class in Java can have a main 
